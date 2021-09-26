@@ -1,0 +1,15 @@
+{%extends 'main-html.html'%}
+
+
+{%block content%}
+<h2>This is the {{message}} Template</h2>
+
+List of Django Projects so far:
+<ol>
+
+{% for prj in project %}
+<li><a href="{%url 'project' prj.id%}">{{prj.topic}}</a> </li>
+{%endfor%}
+
+</ol>
+{%endblock content%}
